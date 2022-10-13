@@ -1,0 +1,27 @@
+Experiment - 4
+
+Aim :- Apply Stemming on the given text input
+
+For English Language:-
+
+Code :-
+
+from nltk.stem import PorterStemmer
+from nltk.tokenize import word_tokenize
+import nltk
+nltk.download('punkt')
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+True
+ps=PorterStemmer()
+sentence = "Programmers program with programming languages"
+words = word_tokenize(sentence)
+for w in words:
+    print(w, " : ", ps.stem(w))
+
+Output :-
+Programmers  :  programm
+program  :  program
+with  :  with
+programming  :  program
+languages  :  languag
